@@ -1,0 +1,165 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/*------------------------------------CSS Navbar--------------------------------------------------------------*/
+.navbar{
+    background: #000c1c;
+}
+.project-heading{
+    font-size: xx-large;
+    color: white;
+}
+.heading-username{
+  height: 30px;
+  width: 100px;
+  margin-top: 4px;
+  margin-right: 5px;
+  background:darkgray;
+  text-align: center;
+
+}
+
+
+
+
+/*-------------------------------------Main parent container after navbar-------------------------*/
+.container-demo{
+    width: 100%;
+    border: 1px solid rgb(201, 98, 98);
+    height: 550px;
+    display: flex;
+    background:#000c1c;
+}
+/*-----------------------card for adding password ,email and catergory Password------------------------------*/
+.email-pass-card{
+    width: 270px;
+    height: 300px;;
+    /* border: 1px solid black; */
+    margin: 10px 5px;
+    background:#305b61;
+    text-align: center;
+
+}
+
+.username p{
+    color: white;
+}
+
+.email-pass-card h3{
+    color: white;
+}
+.email-pass-card-input{
+    margin: 10px 0px; 
+    border-radius: 10%;
+}
+.email-pass-card button{
+    margin-top: 14px;
+}
+.btn-outline-success a{
+    text-decoration: none;
+}
+/*----------------------------CSS for display user's email and password card details------------------------*/
+.email-pass-card-details{
+    width: 270px;
+    height: 300px;
+    /* border: 1px solid black; */
+    margin: 10px 7px;
+    /* background-color: brown; */
+    background:#305b61;
+    
+}
+.email-pass-card-details h2{
+    margin: 2px 0px;
+    color: white;
+}
+.username{
+    width: 200px;
+    height: 70px;
+    /* border: 1px solid black; */
+    margin: 4px 0px;
+}
+.username h5{
+    color: #000c1c;
+}
+
+
+
+
+
+.copy-link{
+    display: flex;
+    max-width: 240px;
+    height: 36px;
+    /* border: 1px solid black; */
+}
+.copy-link-input{
+    flex-grow: 1;
+    padding: 0px 8px;
+    font-size: 14px;
+    border: 1px solid #cccccc;
+    border-right: none;
+    outline: none;
+}
+.copy-link-input:hover{
+   background: #cccccc;
+}
+.copy-link-button{
+    flex-shrink: 0;
+    height: 36px;
+    width: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #dddddd;
+    color: #333333;
+    outline: none;
+    border: 1px solid #cccccc;
+    
+}
+
+/*--------------------------------------------------------------------------*/
+
+
+/*flash Message after copying password*/
+#my-modal{
+    width: 200px;
+    height: 150px;
+    border: 1px solid #333;
+    box-sizing: border-box;
+    text-align: center;
+    background: #f1f1f1;
+    padding: 15px;
+
+    /*making model center*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+     /*hide for the first time*/
+     display: none;
+
+}
+
+
+/*-------------------------Common CSS classes-----------------------------------------*/
+.text-center-class{
+text-align: center;
+}
+.margin-username-inputanduserID{
+    margin-left: 10px;
+}
+#btn{
+    text-align: center;
+}
+.center-button{
+    /* text-align: center; */
+    margin: 28px 10px;
+
+}
+.center-button button{
+   width: 180px;
+}

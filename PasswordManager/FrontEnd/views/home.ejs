@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <!-- CSS only -->
+
+    <!--font awesome-link-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/home.css">
+  
+</head>
+<body>
+  <nav class="navbar ">
+    <div class="container-fluid">
+     <p class="project-heading"><b> Password Management System</b></p>
+      <form class="d-flex">
+       <div  class="heading-username"> <p>Hey!<% if(loginUser){%> <%= loginUser %> <% }%> </p></div>
+        <button class="btn btn-outline-success" type="submit"><a href="/logout">Logout</a></button>
+      </form>
+    </div>
+  </nav>
+  <div class="container-demo">
+    <div class="email-pass-card"> 
+      
+    <h3>Secure Your Passwords</h3>
+    <form action="/person2" method="post">
+    <input class="email-pass-card-input" type="text" name="name" placeholder="Email ID"><br>
+    <input  class="email-pass-card-input" type="text" name="phone" placeholder="Password"><br>
+    <select name="category"> 
+      <option value="Google">Google</option>
+      <option value="Gmail">Gmail</option>
+      <option value="Facebook">Facebook</option>
+      <option value="Instagram">Instagram</option>
+  </select><br>
+  <button id="btn" type="submit" class="btn btn-dark">ADD</button>
+  </form>
+    </div>
+    <% for(let i of contact_lists){%>
+
+    <div class="email-pass-card-details">
+      <h2 class="text-center-class"><%= i.Categories %></h2>
+     <div class="username">
+      <h5 class="margin-username-inputanduserID">userID:</h5><p class="margin-username-inputanduserID"><%= i.name %></p>
+      
+     </div>
+     <div class="copy-link">
+      <input type="text" id="input-data" class="copy-link-input  margin-username-inputanduserID" value="<%= i.Phone %>">
+      <button type="button" class="copy-link-button" id="btn-copy">
+        <span class="material-icons">
+          content_copy
+          </span>
+      </button>
+     </div>
+     <div class="center-button">
+     <a  href="/delete-contact/?id=<%= i._id %>"> <button     id="btn" type="submit" class="btn btn-dark  ">  Delete </button></a>
+     </div>
+    </div>
+    <%}%>
+
+    
+
+  </div>
+
+  <div id="my-modal">
+    <p><b>Copied</b></p>
+  </div>
+
+  <script type="text/javascript" src="/css/jsfile.js"></script>
+</body>
+</html>
