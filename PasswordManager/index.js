@@ -1,4 +1,4 @@
-require('dotenv').config()
+
 const express=require('express');
 const path=require('path');
 const db=require('./config/mongose');
@@ -15,7 +15,7 @@ if (typeof localStorage === "undefined" || localStorage === null) {
 
 const app=express();
 
-const port=process.env.PORT || '600';
+const port= 600;
 
 
 
